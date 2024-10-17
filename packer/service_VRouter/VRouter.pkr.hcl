@@ -18,7 +18,7 @@ source "qemu" "VRouter" {
   memory      = 2048
   accelerator = "kvm"
 
-  iso_url      = "export/alpine318.qcow2"
+  iso_url      = "export/alpine320.qcow2"
   iso_checksum = "none"
 
   headless = var.headless
