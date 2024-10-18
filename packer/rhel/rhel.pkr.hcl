@@ -27,8 +27,9 @@ source "qemu" "rhel" {
   disk_interface   = "virtio"
   net_device       = "virtio-net"
   format           = "qcow2"
-  disk_compression = false
-  disk_size        = 20480
+  #disk_compression = false
+  #disk_size        = 20480
+  skip_resize_disk = true
 
   output_directory = var.output_dir
 

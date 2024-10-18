@@ -11,11 +11,12 @@ systemd-machine-id-setup
 
 ln -sf ../usr/share/zoneinfo/UTC /etc/localtime
 
-subscription-manager register \
-    --username "${RHEL_USER}" \
-    --password "${RHEL_PASSWORD}" \
-    --auto-attach \
-    --force
+#subscription-manager register \
+#    --username "${RHEL_USER}" \
+#    --password "${RHEL_PASSWORD}" \
+#    --auto-attach \
+#    --force
+subscription-manager register --activationkey=KLAB --org=11173102
 
 subscription-manager repos \
     --enable codeready-builder-for-rhel-9-x86_64-rpms

@@ -4,7 +4,7 @@ set -ex
 timeout 5m virt-sysprep \
     --add ${OUTPUT_DIR}/${APPLIANCE_NAME} \
     --selinux-relabel \
-    --root-password disabled \
+    --root-password password:opennebula \
     --hostname localhost.localdomain \
     --run-command 'truncate -s0 -c /etc/machine-id' \
     --delete /etc/resolv.conf

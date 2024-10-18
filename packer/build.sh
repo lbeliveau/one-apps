@@ -9,7 +9,7 @@ mkdir -p "$OUTPUT_DIR"
 
 packer init "$INPUT_DIR"
 
-packer build -force \
+packer build -on-error=ask -force \
     -var "appliance_name=${DISTRO}" \
     -var "version=${DISTRO_VER}" \
     -var "input_dir=${INPUT_DIR}" \

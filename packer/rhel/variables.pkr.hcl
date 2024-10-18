@@ -41,8 +41,8 @@ variable "rhel" {
     }
 
     "9" = {
-      iso_url      = ""
-      iso_checksum = ""
+      iso_url      = "rhel-9.4-x86_64-kvm.qcow2"
+      iso_checksum = "d362e72518a2d7415d850b8177c814f6fd87f42ca1640bda17e98855e1d6baad"
     }
   }
 }
