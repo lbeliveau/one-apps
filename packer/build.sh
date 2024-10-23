@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -x
+
 DISTRO_NAME=$1                           # e.g. debian
 DISTRO_VER=$2                            # e.g. 11
 DISTRO=${DISTRO_NAME}${DISTRO_VER}       # e.g. debian11
@@ -9,7 +12,7 @@ mkdir -p "$OUTPUT_DIR"
 
 packer init "$INPUT_DIR"
 
-packer build -force \
+packer build -on-error=ask -force \
     -var "appliance_name=${DISTRO}" \
     -var "version=${DISTRO_VER}" \
     -var "input_dir=${INPUT_DIR}" \
